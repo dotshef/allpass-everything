@@ -206,118 +206,126 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="grid grid-cols-1 gap-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* 실패하는 대화 */}
-              <div className="space-y-8 bg-white border border-border rounded-xl p-8">
-                <h4 className="font-bold text-center text-muted text-xl mb-8 pb-4 border-b border-border">
-                  실패하는 대화
-                </h4>
+              <div className="rounded-xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/img/interview_bad.png')" }} />
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="relative z-10 space-y-8 p-8">
+                  <h4 className="font-bold text-center text-white/70 text-xl mb-8 pb-4 border-b border-white/20">
+                    실패하는 대화
+                  </h4>
 
-                <BubblePopAnimation>
-                  <div className="flex justify-end">
-                    <div className="max-w-sm">
-                      <p className="text-sm font-semibold text-muted mb-2 text-right">
-                        면접관
-                      </p>
-                      <div className="bg-muted-bg p-4 rounded-2xl rounded-tr-none">
-                        <p className="text-foreground">
-                          &quot;지원자님의 강점이 무엇인가요?&quot;
+                  <BubblePopAnimation>
+                    <div className="flex justify-end">
+                      <div className="max-w-sm">
+                        <p className="text-sm font-semibold text-white/70 mb-2 text-right">
+                          면접관
                         </p>
+                        <div className="bg-white/15 p-4 rounded-2xl rounded-tr-none">
+                          <p className="text-white">
+                            &quot;지원자님의 강점이 무엇인가요?&quot;
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </BubblePopAnimation>
+                  </BubblePopAnimation>
 
-                <BubblePopAnimation delay={400}>
-                  <div className="flex justify-start">
-                    <div className="max-w-sm">
-                      <p className="text-sm font-semibold text-muted mb-2">
-                        지원자
-                      </p>
-                      <div className="bg-muted-bg p-4 rounded-2xl rounded-tl-none">
-                        <p className="text-foreground">
-                          &quot;저는 성실하고 책임감이 강합니다. 맡은 일은 끝까지
-                          해내는 성격입니다.&quot;
+                  <BubblePopAnimation delay={400}>
+                    <div className="flex justify-start">
+                      <div className="max-w-sm">
+                        <p className="text-sm font-semibold text-white/70 mb-2">
+                          지원자
                         </p>
+                        <div className="bg-white/15 p-4 rounded-2xl rounded-tl-none">
+                          <p className="text-white">
+                            &quot;저는 성실하고 책임감이 강합니다. 맡은 일은 끝까지
+                            해내는 성격입니다.&quot;
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </BubblePopAnimation>
+                  </BubblePopAnimation>
 
-                <BubblePopAnimation delay={600}>
-                  <div className="flex justify-end">
-                    <div className="max-w-sm">
-                      <p className="text-sm font-semibold text-muted mb-2 text-right">
-                        면접관 (속마음)
-                      </p>
-                      <div className="bg-red-50 p-4 rounded-2xl rounded-tr-none border border-red-100">
-                        <p className="text-red-600 italic">
-                          &apos;모든 지원자가 하는 말이네... 구체적인 사례가 없어
-                          신뢰하기 어렵다.&apos;
+                  <BubblePopAnimation delay={600}>
+                    <div className="flex justify-end">
+                      <div className="max-w-sm">
+                        <p className="text-sm font-semibold text-white/70 mb-2 text-right">
+                          면접관 (속마음)
                         </p>
+                        <div className="bg-red-500/30 p-4 rounded-2xl rounded-tr-none border border-red-400/30">
+                          <p className="text-red-300 italic">
+                            &apos;모든 지원자가 하는 말이네... 구체적인 사례가 없어
+                            신뢰하기 어렵다.&apos;
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </BubblePopAnimation>
+                  </BubblePopAnimation>
+                </div>
               </div>
 
               {/* 성공하는 대화 */}
-              <div className="space-y-8 bg-white border border-border rounded-xl p-8">
-                <h4 className="font-bold text-center text-primary text-xl mb-8 pb-4 border-b border-border">
-                  성공하는 대화
-                </h4>
+              <div className="rounded-xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/img/interview_good.png')" }} />
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="relative z-10 space-y-8 p-8">
+                  <h4 className="font-bold text-center text-blue-300 text-xl mb-8 pb-4 border-b border-white/20">
+                    성공하는 대화
+                  </h4>
 
-                <BubblePopAnimation>
-                  <div className="flex justify-end">
-                    <div className="max-w-sm">
-                      <p className="text-sm font-semibold text-muted mb-2 text-right">
-                        면접관
-                      </p>
-                      <div className="bg-muted-bg p-4 rounded-2xl rounded-tr-none">
-                        <p className="text-foreground">
-                          &quot;지원자님의 강점이 무엇인가요?&quot;
+                  <BubblePopAnimation>
+                    <div className="flex justify-end">
+                      <div className="max-w-sm">
+                        <p className="text-sm font-semibold text-white/70 mb-2 text-right">
+                          면접관
                         </p>
+                        <div className="bg-white/15 p-4 rounded-2xl rounded-tr-none">
+                          <p className="text-white">
+                            &quot;지원자님의 강점이 무엇인가요?&quot;
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </BubblePopAnimation>
+                  </BubblePopAnimation>
 
-                <BubblePopAnimation delay={400}>
-                  <div className="flex justify-start">
-                    <div className="max-w-lg">
-                      <p className="text-sm font-semibold text-muted mb-2">
-                        지원자
-                      </p>
-                      <div className="bg-primary/5 p-4 rounded-2xl rounded-tl-none border border-primary/10">
-                        <p className="text-foreground">
-                          &quot;저는 목표 달성을 위한 체계적인 실행력이
-                          강점입니다. 학부 연구 프로젝트에서 예상치 못한 문제가
-                          발생했을 때 (중략) ~를 통해 원인을 세분화하고 팀원들과
-                          협업하여 (중략) ~한 전략을 통해 일정 내에 문제를
-                          해결했습니다. 이러한 경험이 귀사의 R&D 프로젝트에도
-                          도움이 될 것이라 생각합니다.&quot;
+                  <BubblePopAnimation delay={400}>
+                    <div className="flex justify-start">
+                      <div className="max-w-lg">
+                        <p className="text-sm font-semibold text-white/70 mb-2">
+                          지원자
                         </p>
+                        <div className="bg-white/15 p-4 rounded-2xl rounded-tl-none">
+                          <p className="text-white">
+                            &quot;저는 목표 달성을 위한 체계적인 실행력이
+                            강점입니다. 학부 연구 프로젝트에서 예상치 못한 문제가
+                            발생했을 때 (중략) ~를 통해 원인을 세분화하고 팀원들과
+                            협업하여 (중략) ~한 전략을 통해 일정 내에 문제를
+                            해결했습니다. 이러한 경험이 귀사의 R&D 프로젝트에도
+                            도움이 될 것이라 생각합니다.&quot;
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </BubblePopAnimation>
+                  </BubblePopAnimation>
 
-                <BubblePopAnimation delay={600}>
-                  <div className="flex justify-end">
-                    <div className="max-w-sm">
-                      <p className="text-sm font-semibold text-muted mb-2 text-right">
-                        면접관 (속마음)
-                      </p>
-                      <div className="bg-green-50 p-4 rounded-2xl rounded-tr-none border border-green-100">
-                        <p className="text-green-700 italic">
-                          &apos;구체적인 사례와 우리 회사와의 연관성까지
-                          언급했네. 준비가 잘 되어 있군.&apos;
+                  <BubblePopAnimation delay={600}>
+                    <div className="flex justify-end">
+                      <div className="max-w-sm">
+                        <p className="text-sm font-semibold text-white/70 mb-2 text-right">
+                          면접관 (속마음)
                         </p>
+                        <div className="bg-green-500/30 p-4 rounded-2xl rounded-tr-none border border-green-400/30">
+                          <p className="text-green-300 italic">
+                            &apos;구체적인 사례와 우리 회사와의 연관성까지
+                            언급했네. 준비가 잘 되어 있군.&apos;
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </BubblePopAnimation>
+                  </BubblePopAnimation>
+                </div>
               </div>
             </div>
           </div>
