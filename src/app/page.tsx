@@ -6,7 +6,7 @@ import HomeJobSlider from "@/components/HomeJobSlider";
 import { testimonialAbstracts } from "@/data/testimonialAbstract";
 import { companies } from "@/data/companies";
 import { jobs } from "@/data/jobs";
-import FadeInAnimation from "@/components/FadeInAnimation";
+// import FadeInAnimation from "@/components/FadeInAnimation";
 import BubblePopAnimation from "@/components/BubblePopAnimation";
 import { EMAIL } from "@/data/constants";
 import { Button } from "@/components/ui/button";
