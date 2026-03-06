@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { testimonials } from '@/data/testimonitals';
 import { EMAIL } from '@/data/constants';
@@ -92,9 +93,11 @@ export default function Testimonials() {
                             onClick={() => window.open('https://kmong.com/gig/645507', '_blank')}
                             className="rounded-full px-8 bg-white"
                         >
-                            <img
+                            <Image
                                 src="/icons/kmong.png"
                                 alt="크몽 아이콘"
+                                width={24}
+                                height={24}
                                 className="w-6 h-6 object-contain"
                             />
                             크몽에서 후기 보기
@@ -105,9 +108,11 @@ export default function Testimonials() {
                             onClick={() => window.open('https://soomgo.com/profile/users/10562016', '_blank')}
                             className="rounded-full px-8 bg-white"
                         >
-                            <img
+                            <Image
                                 src="/icons/soomgo.png"
                                 alt="숨고 아이콘"
+                                width={24}
+                                height={24}
                                 className="w-6 h-6 object-contain"
                             />
                             숨고에서 후기 보기

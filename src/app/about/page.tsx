@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { EMAIL } from '@/data/constants';
 import { Button } from '@/components/ui/button';
 
@@ -26,9 +27,11 @@ export default function About() {
                         {/* 이미지 */}
                         <div className="w-full md:flex-1 mb-8 md:mb-0">
                             <div className="relative w-64 md:w-96 mx-auto md:mx-0 rounded-2xl overflow-hidden">
-                                <img
+                                <Image
                                     src="/img/stand_front.jpg"
                                     alt="전문 컨설턴트"
+                                    width={384}
+                                    height={576}
                                     className="object-cover w-full h-full"
                                 />
                             </div>

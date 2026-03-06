@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { EMAIL } from "@/data/constants";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
@@ -28,9 +29,11 @@ export default function Contact() {
                 window.open("https://open.kakao.com/o/sAfYyKLg", "_blank")
               }
             >
-              <img
+              <Image
                 src="/icons/kakaotalk.png"
                 alt="카카오톡 아이콘"
+                width={24}
+                height={24}
                 className="w-6 h-6 object-contain"
               />
               카카오톡으로 상담하기
@@ -83,9 +86,11 @@ export default function Contact() {
                 className="bg-white border border-border p-6 rounded-xl text-center hover:border-primary/30 transition-colors duration-300 cursor-pointer"
               >
                 <div className="h-8 w-8 mx-auto mb-2 flex items-center justify-center">
-                  <img
+                  <Image
                     src={channel.icon}
                     alt={`${channel.name} 아이콘`}
+                    width={32}
+                    height={32}
                     className="max-h-full max-w-full object-contain w-8 h-8"
                   />
                 </div>

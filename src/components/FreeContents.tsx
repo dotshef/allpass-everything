@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function FreeContents() {
   return (
     <div>
@@ -13,9 +15,11 @@ export default function FreeContents() {
           }
           className="w-3/4 mx-auto bg-white border border-border text-foreground px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition flex items-center justify-center gap-3 hover:cursor-pointer"
         >
-          <img
+          <Image
             src="/icons/naver_blog.svg"
             alt="네이버 블로그 아이콘"
+            width={24}
+            height={24}
             className="w-6 h-6 object-contain"
           />
           네이버 블로그에서 취업 팁 보기
@@ -30,9 +34,11 @@ export default function FreeContents() {
           }
           className="w-3/4 mx-auto bg-white border border-border text-foreground px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition flex items-center justify-center gap-3 hover:cursor-pointer"
         >
-          <img
+          <Image
             src="/icons/instagram.webp"
             alt="인스타그램 아이콘"
+            width={24}
+            height={24}
             className="w-6 h-6 object-contain"
           />
           인스타그램에서 취업 팁 보기
@@ -44,9 +50,11 @@ export default function FreeContents() {
           }
           className="w-3/4 mx-auto bg-white border border-border text-foreground px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition flex items-center justify-center gap-3 hover:cursor-pointer"
         >
-          <img
+          <Image
             src="/icons/threads.png"
             alt="스레드 아이콘"
+            width={24}
+            height={24}
             className="w-6 h-6 object-contain"
           />
           스레드에서 취업 팁 보기
