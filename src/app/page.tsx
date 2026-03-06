@@ -20,12 +20,12 @@ export default function Home() {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/banner.jpg')" }} />
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 flex justify-end">
           <div className="w-1/2 text-center">
-            <h1 className="text-5xl font-bold text-white leading-tight tracking-tight mb-6">
+            <h1 className="text-5xl font-bold text-foreground leading-tight tracking-tight mb-6">
               대기업 김과장의<br />합격하는 자소서
             </h1>
 
             <div className="mb-8">
-              <div className="space-y-3 text-lg text-white/80">
+              <div className="space-y-3 text-lg text-foreground">
                 <div>-. SK하이닉스, 현대로템 출신 취업 전문 컨설턴트</div>
                 <div>-. 연 1,000건+ 자소서 첨삭 및 Zoom 비대면 면접 컨설팅</div>
                 <div>-. 현재까지 누적 990명+ 최종합격 이력</div>
