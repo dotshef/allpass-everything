@@ -39,7 +39,7 @@ export default function Navbar() {
                         href="/"
                         className={cn(
                             "text-xl md:text-2xl font-extrabold transition-colors duration-300",
-                            scrolled ? "text-foreground" : "text-foreground md:text-white"
+                            scrolled ? "text-primary" : "text-primary md:text-white"
                         )}
                     >
                         대기업김과장의 합격하는 자소서
