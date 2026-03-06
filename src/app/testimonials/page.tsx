@@ -1,8 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { testimonials } from '@/data/testimonitals';
+import { EMAIL } from '@/data/constants';
+import { Button } from '@/components/ui/button';
 
 export default function Testimonials() {
     const [visibleCount, setVisibleCount] = useState(6);
@@ -14,33 +17,35 @@ export default function Testimonials() {
     const hasMore = visibleCount < testimonials.length;
 
     return (
-        <main className="bg-white text-gray-900 min-h-screen flex flex-col">
+        <main className="bg-white text-foreground min-h-screen flex flex-col">
             {/* Hero Section */}
-            <section className="bg-[#f0f2ff] py-20 px-6 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#4655C7] p-5">
-                    실제 이용자들의 생생한 후기
-                </h1>
-                <h2 className="text-xl text-[#4655C7] mb-6">
-                    리뷰 이벤트를 따로 진행하지 않습니다.<br />
-                    다른 취업 컨설턴트와는 다르게 결과물에 대한 &#34;진짜 후기&#34;만을 보여드립니다.
-                </h2>
+            <section className="bg-dark-bg pt-28 pb-16 px-6 text-center">
+                <div className="max-w-4xl mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+                        실제 이용자들의 생생한 후기
+                    </h1>
+                    <h2 className="text-lg text-white/80">
+                        리뷰 이벤트를 따로 진행하지 않습니다.<br />
+                        다른 취업 컨설턴트와는 다르게 결과물에 대한 &#34;진짜 후기&#34;만을 보여드립니다.
+                    </h2>
+                </div>
             </section>
 
             {/* Testimonials Section */}
-            <section className="bg-white py-16 px-6">
+            <section className="bg-white py-20 px-6">
                 <div className="max-w-4xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-12">
                         {testimonials.slice(0, visibleCount).map((testimonial, index) => (
-                            <div key={index} className="bg-[#f7f9ff] p-6 rounded-xl shadow-md border border-gray-100">
+                            <div key={index} className="bg-muted-bg p-6 rounded-xl border border-border hover:border-primary/30 transition-colors duration-300">
                                 <div className="flex items-center mb-4">
-                                    <div className="bg-[#4655C7] text-white w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                                    <div className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center mr-3">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="white"/>
                                             <path d="M12 14C7.58172 14 4 17.5817 4 22H20C20 17.5817 16.4183 14 12 14Z" fill="white"/>
                                         </svg>
                                     </div>
                                     <div className="flex-grow">
-                                        <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                                        <p className="font-semibold text-foreground">{testimonial.name}</p>
                                         <div className="flex">
                                             {[1, 2, 3, 4, 5].map((star) => (
                                                 <span key={star} className="text-yellow-400 text-sm">★</span>
@@ -48,7 +53,7 @@ export default function Testimonials() {
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-gray-700 leading-relaxed whitespace-pre-line">{testimonial.content}</p>
+                                <p className="text-muted leading-relaxed whitespace-pre-line">{testimonial.content}</p>
                             </div>
                         ))}
                     </div>
@@ -58,7 +63,7 @@ export default function Testimonials() {
                         <div className="text-center">
                             <button
                                 onClick={handleLoadMore}
-                                className="text-[#4655C7] font-bold px-20 py-3 rounded-full text-lg hover:text-[#344199] hover:border-[#344199] transition-all duration-300 hover:cursor-pointer flex items-center gap-2 mx-auto group"
+                                className="text-primary font-bold px-20 py-3 rounded-full text-lg hover:text-primary-dark transition-all duration-300 hover:cursor-pointer flex items-center gap-2 mx-auto group"
                             >
                                 더 보기
                                 <svg
@@ -76,62 +81,75 @@ export default function Testimonials() {
             </section>
 
             {/* External Review Links */}
-            <section className="bg-[#f5f6f7] py-16 px-6">
+            <section className="bg-muted-bg py-20 px-6">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-[#4655C7] mb-6">
-                        다른 채널에서 대기업김과장의 최신 후기를 확인해보세요
-                    </h2>
-                    <p className="text-gray-600 mb-8">
-                        더 많은 실제 이용자 후기와 평점을 확인하실 수 있습니다
-                    </p>
+                    <h2 className="text-3xl font-bold text-foreground text-center mb-4">다른 채널에서 대기업김과장의 최신 후기를 확인해보세요</h2>
+                    <p className="text-muted text-center">더 많은 실제 이용자 후기와 평점을 확인하실 수 있습니다</p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <button
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+                        <Button
+                            variant="outline"
+                            size="lg"
                             onClick={() => window.open('https://kmong.com/gig/645507', '_blank')}
-                            className="bg-white border-2 border-[#4655C7] text-[#4655C7] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#4655C7] hover:text-white transition flex items-center gap-2 hover:cursor-pointer"
+                            className="rounded-full px-8 bg-white"
                         >
-                            <img
+                            <Image
                                 src="/icons/kmong.png"
                                 alt="크몽 아이콘"
+                                width={24}
+                                height={24}
                                 className="w-6 h-6 object-contain"
                             />
                             크몽에서 후기 보기
-                        </button>
-                        <button
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="lg"
                             onClick={() => window.open('https://soomgo.com/profile/users/10562016', '_blank')}
-                            className="bg-white border-2 border-[#4655C7] text-[#4655C7] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#4655C7] hover:text-white transition flex items-center gap-2 hover:cursor-pointer"
+                            className="rounded-full px-8 bg-white"
                         >
-                            <img
+                            <Image
                                 src="/icons/soomgo.png"
                                 alt="숨고 아이콘"
+                                width={24}
+                                height={24}
                                 className="w-6 h-6 object-contain"
                             />
                             숨고에서 후기 보기
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="bg-[#f0f2ff] text-center py-24 px-6">
-                <h2 className="text-3xl font-bold mb-6 text-[#4655C7]">
-                    합격으로 가는 가장 빠른 길
-                </h2>
-                <p className="text-lg text-[#4655C7] mb-6">
-                    서류부터 면접까지 한 방에 끝내기
-                </p>
-                <Link href="/contact">
-                    <button className="bg-[#4655C7] text-white px-8 py-4 rounded-full text-lg hover:bg-[#344199] transition hover:cursor-pointer">
-                        무료 상담 신청하기
-                    </button>
-                </Link>
+            <section className="relative py-24 md:py-32 px-6">
+                <div className="absolute inset-0 bg-dark-bg" />
+                <div className="relative z-10 text-center">
+                    <p className="text-lg md:text-xl font-medium text-white/80 mb-4">
+                        서류부터 면접까지 한 방에 끝내기
+                    </p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-8">
+                        합격으로 가는 가장 빠른 길
+                    </h2>
+                    <Link href="/contact">
+                        <Button size="pill" variant="kakao">
+                            무료 상담 신청하기
+                        </Button>
+                    </Link>
+                </div>
             </section>
 
             {/* Footer */}
-            <footer className="bg-[#4655C7] text-white py-12 px-6 text-center text-sm">
-                <p className="font-semibold mb-2">대기업김과장</p>
-                <p>이메일: kks7180@naver.com</p>
-                <p className="text-xs mt-4">COPYRIGHT 2025. 대기업김과장 All rights reserved.</p>
+            <footer className="bg-dark-bg text-dark-text py-12 px-6">
+                <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
+                    <div className="text-center md:text-left">
+                        <p className="font-semibold text-white mb-2">대기업김과장</p>
+                        <p className="text-sm">이메일: {EMAIL}</p>
+                    </div>
+                    <p className="text-xs">
+                        COPYRIGHT 2025. 대기업김과장 All rights reserved.
+                    </p>
+                </div>
             </footer>
         </main>
     );

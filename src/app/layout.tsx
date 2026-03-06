@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar";
 import BottomLinkBanner from "@/components/stickyFooterBanner";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import {Analytics} from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
     title: "대기업김과장의 합격하는 자소서 | 취업 걱정 오늘부터 그만",
@@ -21,7 +11,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: '대기업김과장 | 자소서 & 면접 컨설팅',
         description: '대기업 최종합격을 이끄는 전문 첨삭 서비스',
-        url: 'https://kks-amber.vercel.app',
+        url: 'https://www.allpsn.com/',
         type: 'website',
     },
 };
@@ -33,12 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
       <Navbar />
         {children}
       <BottomLinkBanner />
+      <Analytics />
       </body>
     </html>
   );

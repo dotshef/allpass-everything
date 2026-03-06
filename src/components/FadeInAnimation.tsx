@@ -20,12 +20,16 @@ const FadeInAnimation = ({ children, className = "", delay = 0 }: AnimatedTextPr
     useEffect(() => {
         if (!isMounted || typeof window === 'undefined') return;
 
+        const el = ref.current;
+        if (!el) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         setIsVisible(true);
                     }, delay);
+                    observer.disconnect();
                 }
             },
             {
@@ -34,14 +38,10 @@ const FadeInAnimation = ({ children, className = "", delay = 0 }: AnimatedTextPr
             }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
+        observer.observe(el);
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
+            observer.disconnect();
         };
     }, [delay, isMounted]);
 

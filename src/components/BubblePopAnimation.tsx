@@ -19,12 +19,16 @@ const BubblePopAnimation = ({ children, delay = 0 }: BubblePopAnimationProps) =>
     useEffect(() => {
         if (!isMounted || typeof window === 'undefined') return;
 
+        const el = ref.current;
+        if (!el) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         setIsVisible(true);
                     }, delay);
+                    observer.disconnect();
                 }
             },
             {
@@ -33,45 +37,23 @@ const BubblePopAnimation = ({ children, delay = 0 }: BubblePopAnimationProps) =>
             }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
+        observer.observe(el);
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
+            observer.disconnect();
         };
     }, [delay, isMounted]);
 
     return (
         <div
             ref={ref}
-            className={`transition-all duration-400 ${
+            className={`transition-all duration-400 ease-out ${
                 isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-4'
             }`}
-            style={{
-                animationName: isVisible ? 'popUp' : 'none',
-                animationDuration: '0.4s',
-                animationTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                animationFillMode: 'forwards'
-            }}
         >
             {children}
-            <style jsx>{`
-                @keyframes popUp {
-                    0% {
-                        opacity: 0;
-                        transform: translateY(20px);
-                    }
-                    100% {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-            `}</style>
         </div>
     );
 };
