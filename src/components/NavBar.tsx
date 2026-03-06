@@ -52,7 +52,7 @@ export default function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 className={cn(
-                                    "text-base font-semibold transition-all duration-300 py-2 border-b-2 border-transparent hover:border-current",
+                                    "text-xl font-semibold transition-all duration-300 py-2 border-b-2 border-transparent hover:border-current",
                                     scrolled
                                         ? "text-foreground hover:text-primary"
                                         : "text-white/90 hover:text-white"
