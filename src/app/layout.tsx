@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar";
 import BottomLinkBanner from "@/components/stickyFooterBanner";
 import {Analytics} from "@vercel/analytics/next";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
     title: "대기업김과장의 합격하는 자소서 | 취업 걱정 오늘부터 그만",
@@ -34,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
       <Navbar />
         {children}
       <BottomLinkBanner />

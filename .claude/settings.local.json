@@ -2,7 +2,38 @@
   "permissions": {
     "allow": [
       "Bash(find:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:ecareer.co.kr)",
+      "WebFetch(domain:www.yakbbal.com)",
+      "WebFetch(domain:endjob.co.kr)",
+      "WebFetch(domain:www.top-tier.co.kr)",
+      "WebFetch(domain:humancorelab.com)",
+      "WebFetch(domain:www.letuin.com)",
+      "WebFetch(domain:jasoseol.com)",
+      "WebFetch(domain:www.itdaa.net)",
+      "WebFetch(domain:www.clipscareer.com)",
+      "WebFetch(domain:jobkorea.me.kr)",
+      "WebFetch(domain:www.acecareer.co.kr)",
+      "WebFetch(domain:bridgein.co.kr)",
+      "WebFetch(domain:trustone-consulting.com)",
+      "WebFetch(domain:www.ucgconsulting.com)",
+      "WebFetch(domain:sssjob.com)",
+      "WebFetch(domain:www.haijob.co.kr)",
+      "WebFetch(domain:www.daegu-recruit.kr)",
+      "WebFetch(domain:jasoseol2.kr)",
+      "WebFetch(domain:www.jobconnecter.co.kr)",
+      "WebFetch(domain:www.diggingcareer.com)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(npx:*)",
+      "Bash(echo:*)",
+      "Bash(node -e \"const {execSync} = require\\(''child_process''\\); try { const r = execSync\\(''npx shadcn@latest init --help'', {encoding:''utf8'', timeout:30000}\\); console.log\\(r\\); } catch\\(e\\) { console.log\\(''STDOUT:'', e.stdout\\); console.log\\(''STDERR:'', e.stderr\\); }\")",
+      "Bash(npm exec:*)",
+      "Bash(npm install:*)",
+      "Bash(node --version:*)",
+      "Bash(npm --version:*)",
+      "Bash(npm run build:*)",
+      "Bash(powershell -NoProfile -Command \"Add-Type -AssemblyName System.Drawing; [System.Drawing.Image]::FromFile\\(''C:\\\\D\\\\SI\\\\allpass\\\\kks\\\\public\\\\img\\\\desk_front.jpg''\\).Size\")",
+      "Bash(powershell -NoProfile -Command \"Add-Type -AssemblyName System.Drawing; [System.Drawing.Image]::FromFile\\(''C:\\\\D\\\\SI\\\\allpass\\\\kks\\\\public\\\\img\\\\banner_char.png''\\).Size\")"
     ]
   }
 }

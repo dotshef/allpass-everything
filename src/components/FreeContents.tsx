@@ -11,7 +11,7 @@ export default function FreeContents() {
               "_blank",
             )
           }
-          className="w-3/4 mx-auto bg-white border-2 border-[#4655C7] text-[#4655C7] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#4655C7] hover:text-white transition flex items-center justify-center gap-3 hover:cursor-pointer"
+          className="w-3/4 mx-auto bg-white border border-border text-foreground px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition flex items-center justify-center gap-3 hover:cursor-pointer"
         >
           <img
             src="/icons/naver_blog.svg"
@@ -28,7 +28,7 @@ export default function FreeContents() {
               "_blank",
             )
           }
-          className="w-3/4 mx-auto bg-white border-2 border-[#4655C7] text-[#4655C7] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#4655C7] hover:text-white transition flex items-center justify-center gap-3 hover:cursor-pointer"
+          className="w-3/4 mx-auto bg-white border border-border text-foreground px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition flex items-center justify-center gap-3 hover:cursor-pointer"
         >
           <img
             src="/icons/instagram.webp"
@@ -42,7 +42,7 @@ export default function FreeContents() {
           onClick={() =>
             window.open("https://www.threads.net/@allpass_everything", "_blank")
           }
-          className="w-3/4 mx-auto bg-white border-2 border-[#4655C7] text-[#4655C7] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#4655C7] hover:text-white transition flex items-center justify-center gap-3 hover:cursor-pointer"
+          className="w-3/4 mx-auto bg-white border border-border text-foreground px-8 py-4 rounded-full text-lg font-semibold hover:border-primary hover:text-primary transition flex items-center justify-center gap-3 hover:cursor-pointer"
         >
           <img
             src="/icons/threads.png"

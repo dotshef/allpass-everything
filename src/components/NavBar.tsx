@@ -1,10 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const navItems = [
         { name: '대표 서비스', href: '/services' },
@@ -13,91 +24,86 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="bg-white shadow-sm">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
+        <nav
+            className={cn(
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+                scrolled
+                    ? "bg-white/95 backdrop-blur-sm shadow-sm"
+                    : "bg-white/95 md:bg-transparent"
+            )}
+        >
+            <div className="max-w-6xl mx-auto px-6">
+                <div className="flex items-center justify-between h-[70px]">
                     {/* 로고 */}
-                    <div className="flex-1 flex items-center pl-8">
-                        <Link href="/" className="text-[#4655C7] text-xl font-extrabold">
-                            대기업김과장의 합격하는 자소서
-                        </Link>
-                    </div>
+                    <Link
+                        href="/"
+                        className={cn(
+                            "text-xl md:text-2xl font-extrabold transition-colors duration-300",
+                            scrolled ? "text-foreground" : "text-foreground md:text-white"
+                        )}
+                    >
+                        대기업김과장의 합격하는 자소서
+                    </Link>
 
                     {/* 데스크톱 메뉴 */}
-                    <div className="hidden md:flex md:space-x-8 flex-1">
+                    <div className="hidden md:flex md:items-center md:gap-8">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="inline-flex items-center px-1 pt-1 text-lg font-semibold text-gray-700 hover:text-[#4655C7] hover:border-b-2 hover:border-[#4655C7]"
+                                className={cn(
+                                    "text-base font-semibold transition-all duration-300 py-2 border-b-2 border-transparent hover:border-current",
+                                    scrolled
+                                        ? "text-foreground hover:text-primary"
+                                        : "text-white/90 hover:text-white"
+                                )}
                             >
                                 {item.name}
                             </Link>
                         ))}
                     </div>
 
-                    {/* 로그인 버튼 */}
-                    {/*<div className="hidden md:flex items-center">*/}
-                    {/*    <Link*/}
-                    {/*        href="/login"*/}
-                    {/*        className="bg-[#4655C7] text-white px-4 py-2 rounded-full text-sm hover:bg-[#344199] transition"*/}
-                    {/*    >*/}
-                    {/*        로그인*/}
-                    {/*    </Link>*/}
-                    {/*</div>*/}
-
                     {/* 모바일 메뉴 버튼 */}
-                    <div className="flex items-center md:hidden">
-                        <button
-                            type="button"
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-[#4655C7] hover:bg-gray-100"
-                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        >
-                            <span className="sr-only">메뉴 열기</span>
-                            {/* 햄버거 아이콘 */}
-                            <svg
-                                className="h-6 w-6"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
-                        </button>
-                    </div>
+                    <button
+                        type="button"
+                        className={cn(
+                            "md:hidden p-2 rounded-lg transition-colors cursor-pointer",
+                            scrolled
+                                ? "text-foreground hover:bg-muted-bg"
+                                : "text-foreground hover:bg-muted-bg md:text-white md:hover:bg-white/10"
+                        )}
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        <span className="sr-only">메뉴 열기</span>
+                        {mobileMenuOpen ? (
+                            <X className="h-6 w-6" />
+                        ) : (
+                            <Menu className="h-6 w-6" />
+                        )}
+                    </button>
                 </div>
             </div>
 
             {/* 모바일 메뉴 */}
-            {mobileMenuOpen && (
-                <div className="md:hidden">
-                    <div className="pt-2 pb-3 space-y-1">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:text-[#4655C7] hover:bg-gray-50"
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
-                        {/*<Link*/}
-                        {/*    href="/login"*/}
-                        {/*    className="block pl-3 pr-4 py-2 text-base font-medium text-white bg-[#4655C7] hover:bg-[#344199] mt-2"*/}
-                        {/*    onClick={() => setMobileMenuOpen(false)}*/}
-                        {/*>*/}
-                        {/*    로그인*/}
-                        {/*</Link>*/}
-                    </div>
+            <div
+                className={cn(
+                    "md:hidden overflow-hidden transition-all duration-300 bg-white",
+                    mobileMenuOpen ? "max-h-60 shadow-lg" : "max-h-0"
+                )}
+            >
+                <div className="px-6 py-3 space-y-1">
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block py-3 text-base font-semibold text-foreground hover:text-primary transition-colors"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
                 </div>
-            )}
+            </div>
         </nav>
     );
 }
