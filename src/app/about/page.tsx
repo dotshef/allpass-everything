@@ -7,7 +7,7 @@ export default function About() {
     return (
         <main className="bg-white text-foreground min-h-screen flex flex-col">
             {/* Hero Section */}
-            <section className="bg-dark-bg pt-28 pb-16 px-6 text-center">
+            <section className="bg-dark-bg pt-16 pb-16 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
                         990명 합격의 비밀, 대기업김과장

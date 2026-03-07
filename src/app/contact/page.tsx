@@ -9,10 +9,10 @@ export default function Contact() {
   return (
     <main className="bg-white text-foreground min-h-screen flex flex-col">
       {/* Hero Section - 상담 초대 */}
-      <section className="bg-dark-bg pt-28 pb-16 px-6 text-center">
+      <section className="bg-dark-bg py-30 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
-            맞춤형 자소서 피드백부터 면접 준비까지,
+            자소서 피드백부터 면접 준비까지,
             <br />
             지금 바로 시작해보세요
           </h1>

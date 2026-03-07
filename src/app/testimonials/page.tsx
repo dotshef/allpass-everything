@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { testimonials } from '@/data/testimonitals';
 import { EMAIL } from '@/data/constants';
 import { Button } from '@/components/ui/button';
+import IconLinkButton from '@/components/IconLinkButton';
 
 export default function Testimonials() {
     const [visibleCount, setVisibleCount] = useState(6);
@@ -19,7 +19,7 @@ export default function Testimonials() {
     return (
         <main className="bg-white text-foreground min-h-screen flex flex-col">
             {/* Hero Section */}
-            <section className="bg-dark-bg pt-28 pb-16 px-6 text-center">
+            <section className="bg-dark-bg py-30 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
                         실제 이용자들의 생생한 후기
@@ -84,40 +84,23 @@ export default function Testimonials() {
             <section className="bg-muted-bg py-20 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl font-bold text-foreground text-center mb-4">다른 채널에서 대기업김과장의 최신 후기를 확인해보세요</h2>
-                    <p className="text-muted text-center">더 많은 실제 이용자 후기와 평점을 확인하실 수 있습니다</p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            onClick={() => window.open('https://kmong.com/gig/645507', '_blank')}
-                            className="rounded-full px-8 bg-white"
-                        >
-                            <Image
-                                src="/icons/kmong.png"
-                                alt="크몽 아이콘"
-                                width={24}
-                                height={24}
-                                className="w-6 h-6 object-contain"
-                            />
-                            크몽에서 후기 보기
-                        </Button>
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            onClick={() => window.open('https://soomgo.com/profile/users/10562016', '_blank')}
-                            className="rounded-full px-8 bg-white"
-                        >
-                            <Image
-                                src="/icons/soomgo.png"
-                                alt="숨고 아이콘"
-                                width={24}
-                                height={24}
-                                className="w-6 h-6 object-contain"
-                            />
-                            숨고에서 후기 보기
-                        </Button>
+                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8 mb-10">
+                        <IconLinkButton
+                            href="https://kmong.com/gig/645507"
+                            icon="/icons/kmong.png"
+                            alt="크몽 아이콘"
+                            label="크몽에서 후기 보기"
+                        />
+                        <IconLinkButton
+                            href="https://soomgo.com/profile/users/10562016"
+                            icon="/icons/soomgo.png"
+                            alt="숨고 아이콘"
+                            label="숨고에서 후기 보기"
+                        />
                     </div>
+
+                    <p className="text-muted text-center">더 많은 실제 이용자 후기와 평점을 확인하실 수 있습니다</p>
                 </div>
             </section>
 

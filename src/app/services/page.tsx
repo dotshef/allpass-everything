@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import FreeContents from "@/components/FreeContents";
+import IconLinkButton from "@/components/IconLinkButton";
 import { EMAIL } from "@/data/constants";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
@@ -8,9 +8,9 @@ export default function Services() {
     return (
         <main className="bg-white text-foreground min-h-screen flex flex-col">
             {/* Hero Section */}
-            <section className="bg-dark-bg pt-28 pb-16 px-6 text-center">
+            <section className="bg-dark-bg py-30 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-10 text-white tracking-tight">
                         기업이 원하는 언어로 바꿔드립니다
                     </h1>
                     <h2 className="text-lg text-white/80">
@@ -142,15 +142,34 @@ export default function Services() {
 
             {/* Free Contents */}
             <section className="bg-muted-bg py-20 px-6">
-                <div className="max-w-xl mx-auto">
+                <div className="max-w-4xl mx-auto">
                     <h2 className="text-3xl font-bold text-foreground text-center mb-8">아직 컨설팅 받을지 말지 고민되시나요?</h2>
                     <h3 className="text-xl font-bold text-foreground mt-4 mb-8 text-center">
                         무료로 제공되는 컨텐츠부터 먼저 확인해보세요
                     </h3>
 
-                    <FreeContents />
+                    <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
+                        <IconLinkButton
+                            href="https://blog.naver.com/pass_everything/223755974500"
+                            icon="/icons/naver_blog.svg"
+                            alt="네이버 블로그 아이콘"
+                            label="네이버 블로그 보기"
+                        />
+                        <IconLinkButton
+                            href="https://www.instagram.com/allpass_everything/"
+                            icon="/icons/instagram.webp"
+                            alt="인스타그램 아이콘"
+                            label="인스타그램 보기"
+                        />
+                        <IconLinkButton
+                            href="https://www.threads.net/@allpass_everything"
+                            icon="/icons/threads.png"
+                            alt="스레드 아이콘"
+                            label="스레드 보기"
+                        />
+                    </div>
 
-                    <p className="text-center text-muted text-sm">
+                    <p className="text-center text-muted">
                         무료 취업 팁은 각 채널에서 매일 업데이트 됩니다
                     </p>
                 </div>

@@ -25,7 +25,9 @@ export default function RootLayout({
     <html lang="ko">
       <body className="antialiased">
       <Navbar />
+        <div className="pt-[70px]">
         {children}
+        </div>
       <BottomLinkBanner />
       <Analytics />
       </body>
