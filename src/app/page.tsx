@@ -16,16 +16,16 @@ export default function Home() {
     <main className="bg-white text-foreground min-h-screen flex flex-col">
       {/* Hero Section - banner.jpg 배경 */}
       {/* 데스크톱: 배경 이미지 위에 텍스트 오버레이 */}
-      <section className="relative pt-[70px] hidden md:block">
+      <section className="relative hidden md:block min-h-[600px]">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/banner.jpg')" }} />
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 flex justify-end">
           <div className="w-1/2 text-center">
-            <h1 className="text-5xl font-bold text-foreground leading-tight tracking-tight mb-6">
-              대기업 김과장의<br />합격하는 자소서
+            <h1 className="text-4xl font-bold text-foreground leading-tight tracking-tight mb-6">
+              대기업 김과장의 합격하는 자소서
             </h1>
 
             <div className="mb-8">
-              <div className="space-y-3 text-lg text-foreground">
+              <div className="space-y-3 text-xl text-foreground leading-tight">
                 <div>-. SK하이닉스, 현대로템 출신 취업 전문 컨설턴트</div>
                 <div>-. 연 1,000건+ 자소서 첨삭 및 Zoom 비대면 면접 컨설팅</div>
                 <div>-. 현재까지 누적 990명+ 최종합격 이력</div>
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* 모바일: 이미지 위 + 텍스트 아래 분리 */}
-      <section className="pt-[70px] md:hidden">
+      <section className="md:hidden">
         <div className="w-full aspect-[4/3] bg-cover bg-left bg-no-repeat" style={{ backgroundImage: "url('/img/banner.jpg')" }} />
         <div className="bg-[#d5d7da] px-6 py-10 text-center">
           <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
