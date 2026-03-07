@@ -14,11 +14,10 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className="bg-white text-foreground min-h-screen flex flex-col">
-      {/* Hero Section - banner.jpg 배경 */}
       {/* 데스크톱: 배경 이미지 위에 텍스트 오버레이 */}
       <section className="relative hidden md:block">
         <Image
-          src="/img/banner-resize.jpg"
+          src="/img/banner-resiz.png"
           alt="배너"
           fill
           className="object-cover object-center"
