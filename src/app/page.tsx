@@ -1,12 +1,12 @@
 import TestimonialSliderWrapper from "../components/HomeTestimonialSliderWrapper";
 import Link from "next/link";
+import Image from "next/image";
 import HomeCompanySlider from "@/components/HomeCompanySlider";
 import HomeJobSlider from "@/components/HomeJobSlider";
 
 import { testimonialAbstracts } from "@/data/testimonialAbstract";
 import { companies } from "@/data/companies";
 import { jobs } from "@/data/jobs";
-// import FadeInAnimation from "@/components/FadeInAnimation";
 import BubblePopAnimation from "@/components/BubblePopAnimation";
 import { EMAIL } from "@/data/constants";
 import { Button } from "@/components/ui/button";
@@ -16,9 +16,15 @@ export default function Home() {
     <main className="bg-white text-foreground min-h-screen flex flex-col">
       {/* Hero Section - banner.jpg 배경 */}
       {/* 데스크톱: 배경 이미지 위에 텍스트 오버레이 */}
-      <section className="relative hidden md:block min-h-[600px]">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/banner.jpg')" }} />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 flex justify-end">
+      <section className="relative hidden md:block">
+        <Image
+          src="/img/banner-resize.jpg"
+          alt="배너"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-50 flex justify-end">
           <div className="w-1/2 text-center">
             <h1 className="text-4xl font-bold text-foreground leading-tight tracking-tight mb-6">
               대기업 김과장의 합격하는 자소서
@@ -46,14 +52,23 @@ export default function Home() {
 
       {/* 모바일: 이미지 위 + 텍스트 아래 분리 */}
       <section className="md:hidden">
-        <div className="w-full aspect-[4/3] bg-cover bg-left bg-no-repeat" style={{ backgroundImage: "url('/img/banner.jpg')" }} />
+        <div className="relative w-full overflow-hidden bg-[#d5d7da]">
+          <Image
+            src="/img/banner_char.png"
+            alt="배너"
+            width={859}
+            height={1189}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
         <div className="bg-[#d5d7da] px-6 py-10 text-center">
           <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
             대기업 김과장의 합격하는 자소서
           </h1>
 
           <div className="mb-8">
-            <div className="space-y-2 text-sm text-muted">
+            <div className="space-y-2 text-muted">
               <div>-. SK하이닉스, 현대로템 출신 취업 전문 컨설턴트</div>
               <div>-. 연 1,000건+ 자소서 첨삭 및 Zoom 비대면 면접 컨설팅</div>
               <div>-. 현재까지 누적 990명+ 최종합격 이력</div>
