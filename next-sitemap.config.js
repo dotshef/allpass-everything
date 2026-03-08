@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: 'https://kks-amber.vercel.app',
+    siteUrl: 'https://www.allpsn.com',
     generateRobotsTxt: true,
 };
