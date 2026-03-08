@@ -12,7 +12,7 @@ export default function Contact() {
       <section className="bg-dark-bg py-30 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
-            자소서 피드백부터 면접 준비까지,
+            자소서부터 면접 준비까지,
             <br />
             지금 바로 시작해보세요
           </h1>
@@ -45,7 +45,7 @@ export default function Contact() {
       {/* 브랜드 신뢰 보조 채널 */}
       <section className="bg-muted-bg py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4 tracking-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground text-center mb-4 tracking-tight">
             다양한 채널에서 김과장을 만나보세요
           </h2>
           <h3 className="text-xl font-bold text-muted text-center mb-8">
@@ -116,7 +116,7 @@ export default function Contact() {
           </h2>
           <Accordion>
             <AccordionItem title="Q. 상담 가능 시간은 언제인가요?">
-              A. 평일 오전 9시~오후 9시, 주말 오전 10시~오후 6시까지 상담 가능합니다.
+              A. 평일 오전 9시~오후 9시, 주말 오전 9시~오후 6시까지 상담 가능합니다.
             </AccordionItem>
             <AccordionItem title="Q. 카카오톡 상담 시 어떤 내용을 먼저 보내야 하나요?">
               A. ① 지원하시는 기업/직무, ② 현재 준비 상황, ③ 원하시는 서비스(자소서 첨삭, 면접 연습 등), ④ 마감일정을 알려주세요.
