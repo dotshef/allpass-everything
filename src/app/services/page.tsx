@@ -20,10 +20,30 @@ export default function Services() {
                 </div>
             </section>
 
+            {/* 강의 영상 섹션 */}
+            <section className="bg-white py-20 px-6">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-10">
+                        대기업김과장 - 자기소개서 &amp; 면접 강의 영상
+                    </h2>
+                    <div className="rounded-xl overflow-hidden shadow-lg">
+                        <video
+                            className="w-full"
+                            controls
+                            preload="metadata"
+                            playsInline
+                        >
+                            <source src="/video/class.mp4" type="video/mp4" />
+                            브라우저가 비디오 재생을 지원하지 않습니다.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
             {/* 자기소개서 파트 */}
             <section className="bg-muted-bg py-20 px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold text-foreground text-center mb-8">자기소개서, 왜 계속 떨어질까요?</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-8">자기소개서, 왜 계속 떨어질까요?</h2>
                     <div className="text-center mt-4 mb-8">
                         <h3 className="text-xl font-bold text-foreground">
                             문장 하나 바꿨는데, 합격이 바뀌는 경우를 정말 많이 봤습니다.
@@ -80,7 +100,7 @@ export default function Services() {
             {/* 모의 면접 파트 */}
             <section className="bg-white py-20 px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold text-foreground text-center mb-8">면접만 보면 왜 떨어질까요?</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-8">면접만 보면 왜 떨어질까요?</h2>
                     <h3 className="text-xl font-bold text-foreground mt-4 mb-8 text-center">
                         대부분의 지원자는 면접관이 중요하게 보는 것을 모르고 있습니다
                     </h3>
@@ -143,7 +163,7 @@ export default function Services() {
             {/* Free Contents */}
             <section className="bg-muted-bg py-20 px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold text-foreground text-center mb-8">아직 컨설팅 받을지 말지 고민되시나요?</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-8">아직 컨설팅 받을지 말지 고민되시나요?</h2>
                     <h3 className="text-xl font-bold text-foreground mt-4 mb-8 text-center">
                         무료로 제공되는 컨텐츠부터 먼저 확인해보세요
                     </h3>
@@ -178,7 +198,7 @@ export default function Services() {
             {/* Resume Service Process */}
             <section className="bg-white py-20 px-6">
                 <div className="max-w-xl mx-auto">
-                    <h2 className="text-3xl font-bold text-foreground text-center mb-12">자소서 서비스 진행 방식</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-12">자소서 서비스 진행 방식</h2>
                     <div className="bg-white p-8 rounded-xl border border-border mt-12">
                         <ol className="space-y-6">
                             {[
@@ -208,7 +228,7 @@ export default function Services() {
             {/* Interview Service Process */}
             <section className="bg-muted-bg py-20 px-6">
                 <div className="max-w-xl mx-auto">
-                    <h2 className="text-3xl font-bold text-foreground text-center mb-12">모의 면접 서비스 진행 방식</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-12">모의 면접 서비스 진행 방식</h2>
                     <div className="bg-white p-8 rounded-xl border border-border mt-12">
                         <ol className="space-y-6">
                             {[
@@ -238,7 +258,7 @@ export default function Services() {
             {/* FAQ */}
             <section className="bg-white py-20 px-6">
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-3xl font-bold text-foreground text-center mb-12">자주 묻는 질문</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight mb-12">자주 묻는 질문</h2>
                     <div className="mt-12">
                         <Accordion>
                             <AccordionItem title="Q. 언제까지 받을 수 있나요?">
