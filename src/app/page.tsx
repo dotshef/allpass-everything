@@ -103,14 +103,6 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-xl mx-auto mb-12">
-            <p className="text-lg text-muted leading-relaxed">
-              👉 스펙보다 중요한 건, 전달력입니다. <br />
-              👉 비슷한 배경, 경험 속에서도 결국 &apos;표현의 차이&apos;가 합불을
-              결정합니다.
-            </p>
-          </div>
-
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* 불합격 사례 */}
@@ -217,14 +209,6 @@ export default function Home() {
                 &apos;소통 방식&apos;
               </span>
               을 안다면, 손쉽게 풀어나갈 수 있습니다.
-            </p>
-          </div>
-
-          <div className="max-w-xl mx-auto mb-12">
-            <p className="text-lg text-muted leading-relaxed">
-              👉 정해놓은 답변이 아닌 상호작용이 있는 대화를 준비하세요. <br />
-              👉 솔직한 경험을 토대로 대답해도 충분히 면접관의 이목을 끌 수 있는
-              방법이 있습니다.
             </p>
           </div>
 
