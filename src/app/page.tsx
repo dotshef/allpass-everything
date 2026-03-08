@@ -24,19 +24,19 @@ export default function Home() {
           priority
         />
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-50 flex justify-end">
-          <div className="w-1/2 text-center">
-            <h1 className="text-4xl font-bold text-foreground leading-tight tracking-tight mb-6">
+          <div className="w-1/2">
+            <h1 className="text-4xl font-extrabold tracking-tight mb-6 text-primary [text-shadow:_2px_2px_8px_rgba(255,255,255,0.8)]">
               대기업 김과장의 합격하는 자소서
             </h1>
 
             <div className="mb-8">
-              <div className="space-y-3 text-xl text-foreground leading-tight">
+              <div className="space-y-3 text-xl font-semibold leading-tight text-black [text-shadow:_2px_2px_8px_rgba(255,255,255,0.8)]">
                 <div>-. SK하이닉스, 현대로템 출신 취업 전문 컨설턴트</div>
                 <div>-. 연 1,000건+ 자소서 첨삭 및 Zoom 비대면 면접 컨설팅</div>
                 <div>-. 현재까지 누적 990명+ 최종합격 이력</div>
                 <div>-. 숨고, 크몽, 블로그, 당근, 사람인 플랫폼 취업컨설턴트</div>
                 <div>-. 유명 취업 컨설팅 기업 &quot;마스터 강사&quot;</div>
-                <div>-. Thread 취준생 3만 팔로워 보유</div>
+                <div>-. Thread 취준생 4만 팔로워 보유</div>
               </div>
             </div>
 
