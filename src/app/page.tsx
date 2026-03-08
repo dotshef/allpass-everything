@@ -90,20 +90,30 @@ export default function Home() {
       {/* 취업, 스펙이 부족해서 떨어지는 걸까요? 섹션 */}
       <section className="bg-white py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center tracking-tight">취업, 스펙이 부족해서 떨어지는 걸까요?</h2>
+          <BubblePopAnimation>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">
+              취업, 스펙이 부족해서 떨어지는 걸까요?
+            </h2>
+          </BubblePopAnimation>
 
-          <div className="mt-6 text-center">
-            <p className="text-xl text-muted">
-              또 자격증, 인턴, 대외활동을 찾아 헤매시나요?
-            </p>
-            <p className="text-xl text-foreground font-semibold mt-2 mb-8">
-              채용 담당자는 그보다{" "}
-              <span className="text-primary font-bold">
-                &apos;읽고 싶은 자기소개서&apos;
-              </span>
-              를 찾고 있습니다.
-            </p>
-          </div>
+
+
+            <div className="mt-15 flex flex-col text-center mb-20 gap-10">
+              <BubblePopAnimation delay={100}>
+                <p className="text-xl md:text-2xl font-semibold">
+                  또 자격증, 인턴, 대외활동을 찾아 헤매시나요?
+                </p>
+              </BubblePopAnimation>
+              <BubblePopAnimation delay={200}>
+                <p className="text-xl md:text-2xl font-semibold">
+                  채용 담당자는 그보다{" "}
+                  <span className="text-primary font-bold">
+                  &apos;읽고 싶은 자기소개서&apos;
+                  </span>
+                  를 찾고 있습니다.
+                </p>
+              </BubblePopAnimation>
+            </div>
 
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -202,17 +212,22 @@ export default function Home() {
       {/* 기업에서 원하는 대화법이 있습니다 섹션 */}
       <section className="bg-muted-bg py-20 md:py-28 px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center tracking-tight">기업에서 원하는 대화법이 있습니다</h2>
+          <BubblePopAnimation>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">기업에서 원하는 대화법이 있습니다</h2>
+          </BubblePopAnimation>
 
-          <div className="mt-6 text-center mb-8">
-            <p className="text-xl text-foreground font-semibold">
-              채용담당자가 원하는{" "}
-              <span className="text-primary font-bold">
+          <BubblePopAnimation delay={100}>
+            <div className="mt-15 text-center mb-20">
+              <p className="text-xl md:text-2xl text-foreground font-semibold">
+                채용담당자가 원하는{" "}
+                <span className="text-primary font-bold">
                 &apos;소통 방식&apos;
               </span>
-              을 안다면, 손쉽게 풀어나갈 수 있습니다.
-            </p>
-          </div>
+                을 안다면, 손쉽게 풀어나갈 수 있습니다.
+              </p>
+            </div>
+          </BubblePopAnimation>
+
 
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -343,16 +358,25 @@ export default function Home() {
       {/* 채용 혹한기에도 압도적인 성과 섹션 */}
       <section className="bg-white py-20 md:py-28 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center tracking-tight">채용 혹한기에도 압도적인 성과를 내고 있습니다</h2>
+          <BubblePopAnimation>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">채용 혹한기에도 압도적인 성과를 내고 있습니다</h2>
+          </BubblePopAnimation>
 
-          <p className="text-xl text-center mt-4 mb-2">
-            <span className="font-semibold text-primary">
-              990명 이상의 합격자, 150개 이상의 기업.
-            </span>{" "}
-          </p>
-          <p className="text-xl text-center text-muted mb-12">
-            당신도 다음 성공 사례가 될 수 있습니다.
-          </p>
+          <div className="flex flex-col mt-10 mb-20 gap-10">
+            <BubblePopAnimation delay={100}>
+              <p className="text-xl md:text-3xl text-center mt-4 mb-2 text-primary font-semibold">
+                990명 이상의 합격자, 150개 이상의 기업.
+              </p>
+            </BubblePopAnimation>
+
+            <BubblePopAnimation delay={200}>
+              <p className="text-xl md:text-3xl text-center text-primary font-semibold">
+                당신도 다음 성공 사례가 될 수 있습니다.
+              </p>
+            </BubblePopAnimation>
+          </div>
+
+
 
           {/* 숫자 강조 배너 */}
           <div className="max-w-5xl mx-auto">
@@ -395,7 +419,7 @@ export default function Home() {
 
       {/* Testimonials - Card Slider */}
       <section className="py-20 md:py-28 px-6 bg-muted-bg">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center tracking-tight">이용자 후기</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">이용자 후기</h2>
 
         {/* SEO를 위한 실제 후기 데이터 (스크린 리더와 검색 엔진용) */}
         <div className="sr-only">
