@@ -61,13 +61,13 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="bg-[#d5d7da] px-6 py-10 text-center">
-          <h1 className="text-3xl font-bold text-foreground leading-tight tracking-tight mb-6">
+        <div className="bg-[#d5d7da] px-6 py-10 text-left">
+          <h1 className="text-3xl font-extrabold text-primary leading-tight tracking-tight mb-6 [text-shadow:_2px_2px_8px_rgba(0,0,0,0.3)]">
             대기업 김과장의 합격하는 자소서
           </h1>
 
           <div className="mb-8">
-            <div className="space-y-2 text-muted">
+            <div className="space-y-2 text-black font-semibold [text-shadow:_2px_2px_8px_rgba(0,0,0,0.3)]">
               <div>-. SK하이닉스, 현대로템 출신 취업 전문 컨설턴트</div>
               <div>-. 연 1,000건+ 자소서 첨삭 및 Zoom 비대면 면접 컨설팅</div>
               <div>-. 현재까지 누적 990명+ 최종합격 이력</div>
@@ -77,11 +77,13 @@ export default function Home() {
             </div>
           </div>
 
-          <Link href="/contact">
-            <Button size="pill" variant="dark" className="font-bold">
-              무료 상담 신청하기
-            </Button>
-          </Link>
+          <div className="flex justify-center">
+            <Link href="/contact">
+              <Button size="pill" variant="dark" className="font-bold">
+                무료 상담 신청하기
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
