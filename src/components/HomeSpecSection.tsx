@@ -18,7 +18,7 @@ export default function HomeSpecSection() {
             </BubblePopAnimation>
             <BubblePopAnimation delay={200}>
               <p className="text-xl md:text-2xl font-semibold">
-                채용 담당자는 그보다{" "}
+                채용 담당자는 {" "}
                 <span className="text-primary font-bold">
                 &apos;읽고 싶은 자기소개서&apos;
                 </span>
