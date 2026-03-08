@@ -1,6 +1,7 @@
 import HeroBanner from "@/components/HeroBanner";
 import HomeSpecSection from "@/components/HomeSpecSection";
 import HomeInterviewSection from "@/components/HomeInterviewSection";
+import HomeConsultantSection from "@/components/HomeConsultantSection";
 import HomeStatsSection from "@/components/HomeStatsSection";
 import HomeTestimonialSection from "@/components/HomeTestimonialSection";
 import HomeCTASection from "@/components/HomeCTASection";
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroBanner />
       <HomeSpecSection />
       <HomeInterviewSection />
+      <HomeConsultantSection />
       <HomeStatsSection />
       <HomeTestimonialSection />
       <HomeCTASection />

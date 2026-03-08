@@ -5,7 +5,7 @@ import { testimonialAbstracts } from "@/data/testimonialAbstract";
 
 export default function HomeTestimonialSection() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-muted-bg">
+    <section className="py-20 md:py-28 px-6 bg-white">
       <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">이용자 후기</h2>
       <p className="text-lg md:text-xl text-center mt-4 text-foreground font-semibold">
         크몽, 숨고 등에서 발췌한 <span className="text-primary">진짜 후기</span>입니다.

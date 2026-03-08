@@ -6,7 +6,7 @@ import { jobs } from "@/data/jobs";
 
 export default function HomeStatsSection() {
   return (
-    <section className="bg-white py-20 md:py-28 px-6">
+    <section className="bg-muted-bg py-20 md:py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <BubblePopAnimation>
           <h2 className="text-2xl md:text-5xl font-bold text-foreground text-center tracking-tight">
@@ -39,7 +39,7 @@ export default function HomeStatsSection() {
             ].map((stat, i) => (
               <div
                 key={i}
-                className="border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-colors duration-300"
+                className="border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-colors duration-300 bg-white"
               >
                 <div className="text-3xl md:text-4xl font-bold text-accent mb-2">
                   {stat.count}
@@ -51,14 +51,14 @@ export default function HomeStatsSection() {
         </div>
 
         {/* 합격 기업 리스트 섹션 */}
-        <div className="border border-border rounded-xl p-8 mb-8">
+        <div className="border border-border rounded-xl p-8 mb-8 bg-white">
           <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             이용자 실제 합격 기업 현황
           </h3>
           <HomeCompanySlider rowCount={4} items={companies} />
         </div>
 
-        <div className="border border-border rounded-xl p-8">
+        <div className="border border-border rounded-xl p-8 bg-white">
           <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             이용자 실제 합격 직무 현황
           </h3>
