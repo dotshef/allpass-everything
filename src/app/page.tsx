@@ -61,7 +61,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="bg-[#d5d7da] px-6 py-10 text-left">
+        <div className="bg-[#d5d7da] px-4 py-10 text-left w-full">
           <h1 className="text-3xl font-extrabold text-primary leading-tight tracking-tight mb-6 [text-shadow:_2px_2px_8px_rgba(0,0,0,0.3)]">
             대기업 김과장의 합격하는 자소서
           </h1>
