@@ -44,7 +44,7 @@ export default function Contact() {
 
       {/* 브랜드 신뢰 보조 채널 */}
       <section className="bg-muted-bg py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4 tracking-tight">
             다양한 채널에서 김과장을 만나보세요
           </h2>
@@ -52,8 +52,13 @@ export default function Contact() {
             기존 이용자들의 후기와 무료 콘텐츠를 확인해보세요
           </h3>
 
-          <div className="grid md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
             {[
+              {
+                name: "공식 프로필",
+                icon: "/icons/brand-mark.png",
+                link: "https://litt.ly/pass_everything"
+              },
               {
                 name: "숨고",
                 icon: "/icons/soomgo.png",
