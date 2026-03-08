@@ -2,14 +2,21 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import TestimonialSliderWrapper from "@/components/HomeTestimonialSliderWrapper";
 import { testimonialAbstracts } from "@/data/testimonialAbstract";
+import BubblePopAnimation from "@/components/BubblePopAnimation";
 
 export default function HomeTestimonialSection() {
   return (
     <section className="py-20 md:py-28 px-6 bg-white">
-      <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">이용자 후기</h2>
-      <p className="text-lg md:text-xl text-center mt-4 text-foreground font-semibold">
-        크몽, 숨고 등에서 발췌한 <span className="text-primary">진짜 후기</span>입니다.
-      </p>
+        <BubblePopAnimation>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground text-center tracking-tight">
+                이용자 후기
+            </h2>
+        </BubblePopAnimation>
+        <BubblePopAnimation delay={100}>
+            <p className="text-lg md:text-xl text-center mt-4 text-foreground font-semibold">
+                크몽, 숨고 등에서 발췌한 <span className="text-primary">진짜 후기</span>입니다.
+            </p>
+        </BubblePopAnimation>
 
       {/* SEO를 위한 실제 후기 데이터 (스크린 리더와 검색 엔진용) */}
       <div className="sr-only">
