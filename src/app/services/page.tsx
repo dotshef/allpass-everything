@@ -33,7 +33,7 @@ export default function Services() {
                             preload="metadata"
                             playsInline
                         >
-                            <source src="/video/class.mp4" type="video/mp4" />
+                            <source src="/video/class-sample.mp4" type="video/mp4" />
                             브라우저가 비디오 재생을 지원하지 않습니다.
                         </video>
                     </div>
